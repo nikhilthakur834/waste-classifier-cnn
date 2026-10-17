@@ -46,7 +46,7 @@ Stratified split 70/15/15 (seed 42): 1768 train, 379 validation, 380 test.
 - `confusion_matrix_v2.png`: test set confusion matrix
 
 ## Live Demo
-https://waste-classifier-cnn-hvps4bzkpm745zqpddwsjh.streamlit.app/
+https://waste-classifier-cnn-frvkg9zudc3opqyv8ga9mn.streamlit.app/
 
 ## Limitations
 - Trained on ~2,500 images with mostly clean backgrounds, so accuracy drops on real-world photos
