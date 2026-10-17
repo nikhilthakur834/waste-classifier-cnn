@@ -48,3 +48,9 @@ Stratified split 70/15/15 (seed 42): 1768 train, 379 validation, 380 test.
 ## Live Demo
 https://waste-classifier-cnn-hvps4bzkpm745zqpddwsjh.streamlit.app/
 
+## Limitations
+- Trained on ~2,500 images with mostly clean backgrounds, so accuracy drops on real-world photos
+  (e.g. shiny steel objects were misclassified as plastic).
+- Test accuracy (83.7%) is measured on the same dataset distribution as training.
+- Future work: more diverse data, stronger augmentation (brightness, blur, crops), deeper CNN.
+
