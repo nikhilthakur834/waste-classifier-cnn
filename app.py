@@ -54,7 +54,7 @@ if file is not None:
     with torch.no_grad():              # no training, so no gradients needed
         probs = torch.softmax(load_model()(x), dim=1)[0]  # scores -> probabilities
 
-   best = probs.argmax().item()  # index of the class with the highest probability
+    best = probs.argmax().item()  # index of the class with the highest probability
 
     # Show a clean result without the probability chart.
     # If the model is not confident, say so instead of giving a hard answer.
