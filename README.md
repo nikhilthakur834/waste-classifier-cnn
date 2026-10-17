@@ -45,3 +45,6 @@ Stratified split 70/15/15 (seed 42): 1768 train, 379 validation, 380 test.
 - `best_cnn_v2.pt`: trained model weights
 - `confusion_matrix_v2.png`: test set confusion matrix
 
+## Live Demo
+https://waste-classifier-cnn-hvps4bzkpm745zqpddwsjh.streamlit.app/
+
