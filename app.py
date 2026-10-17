@@ -54,8 +54,11 @@ if file is not None:
     with torch.no_grad():              # no training, so no gradients needed
         probs = torch.softmax(load_model()(x), dim=1)[0]  # scores -> probabilities
 
-    best = probs.argmax().item()
-    st.success(f"Prediction: {CLASSES[best]} ({probs[best].item() * 100:.1f}% confidence)")
+   best = probs.argmax().item()  # index of the class with the highest probability
 
-    # Show the probability of every class
-    st.bar_chart({c: probs[i].item() for i, c in enumerate(CLASSES)})
+    # Show a clean result without the probability chart.
+    # If the model is not confident, say so instead of giving a hard answer.
+    if probs[best].item() < 0.4:
+        st.warning(f"Not sure, but it looks like: {CLASSES[best]}")
+    else:
+        st.success(f"Prediction: {CLASSES[best]}")
